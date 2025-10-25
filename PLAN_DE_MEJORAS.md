@@ -77,15 +77,15 @@ Mejorar y expandir las capacidades del sistema Visión Humana para crear una pla
 
 ## 💡 Prioridad Baja (Largo Plazo - 2-3 meses)
 
-### 7. **Integración con AsistoYa**
-- [ ] Sistema de asistencia virtual con reconocimiento facial
-- [ ] Detección de emociones para mejorar atención al cliente
-- [ ] Análisis de comportamiento de usuarios
-- [ ] Sistema de identificación de clientes VIP
-- [ ] Métricas de satisfacción basadas en expresiones
+### 7. **Procesamiento 100% Local**
+- [ ] Garantizar que todo el procesamiento sea local
+- [ ] Sin envío de datos a servidores externos
+- [ ] Sin dependencias de servicios en la nube
+- [ ] Documentar arquitectura de privacidad
+- [ ] Certificación de privacidad del sistema
 
-**Impacto**: Integración con tu ecosistema AsistoYa
-**Dificultad**: Alta
+**Impacto**: Máxima privacidad y seguridad de datos
+**Dificultad**: Baja
 
 ### 8. **Modo Offline Completo**
 - [ ] PWA totalmente funcional sin conexión
@@ -258,7 +258,7 @@ Mejorar y expandir las capacidades del sistema Visión Humana para crear una pla
 - API REST básica
 
 ### Mes 3:
-- Integración con AsistoYa
+- Procesamiento 100% local garantizado
 - Aplicaciones verticales
 - Mejoras de seguridad
 
@@ -284,9 +284,26 @@ Este es un proyecto open source. Las contribuciones son bienvenidas:
 
 - **GitHub Issues**: Para bugs y feature requests
 - **Discussions**: Para preguntas y discusiones
-- **Email**: [tu-email@ejemplo.com]
+- **Repositorio**: https://github.com/EnmanuelReynoso23/Vision-Humana
+
+---
+
+## 👨‍💻 Autor
+
+**Enmanuel Reynoso Salazar**  
+Creador de Visión Humana - Versión en español  
+
+*Basado en el proyecto original Human de Vladimir Mandic*
+
+### Filosofía del Proyecto
+- ✅ **Procesamiento 100% local** - Sin envío de datos a la nube
+- ✅ **Privacidad absoluta** - Tus datos nunca salen de tu dispositivo
+- ✅ **Open Source** - Código abierto y transparente
+- ✅ **En español** - Documentación y UI completamente en español
+- ✅ **Detección solamente** - Enfocado en detectar, no en almacenar
 
 ---
 
 **Última actualización**: 2025-10-25  
-**Versión del documento**: 1.0
+**Versión del documento**: 1.0  
+**Autor**: Enmanuel Reynoso Salazar

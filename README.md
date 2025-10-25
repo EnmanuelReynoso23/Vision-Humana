@@ -11,6 +11,13 @@
 **Seguimiento de Pose Corporal, Seguimiento de Manos y Dedos 3D, Análisis de Iris,**  
 **Predicción de Edad, Género y Emociones, Seguimiento de Mirada, Reconocimiento de Gestos, Segmentación Corporal**  
 
+> 👨‍💻 **Creado por**: Enmanuel Reynoso Salazar  
+> 🇲🇽 **Versión en español** del proyecto original Human de Vladimir Mandic  
+> 🔒 **100% Local** - Procesamiento completamente en tu dispositivo, sin envío de datos a la nube  
+> 🎯 **Enfoque**: Detección solamente - No almacena ni envía información
+
+[🚀 **Demo en Vivo**](https://vision-humana.vercel.app) | [📝 **Plan de Mejoras**](PLAN_DE_MEJORAS.md) | [🐛 **Reportar Issues**](https://github.com/EnmanuelReynoso23/Vision-Humana/issues)
+
 <br>
 
 ## Características Destacadas
@@ -459,11 +466,64 @@ and [**API Specification**](https://vladmandic.github.io/human/typedoc/classes/H
 
 <br>
 
-[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/vladmandic)
-![Stars](https://img.shields.io/github/stars/vladmandic/human?style=flat-square&svg=true)
-![Forks](https://badgen.net/github/forks/vladmandic/human)
-![Code Size](https://img.shields.io/github/languages/code-size/vladmandic/human?style=flat-square&svg=true)
-![CDN](https://data.jsdelivr.com/v1/package/npm/@vladmandic/human/badge)<br>
-![Downloads](https://img.shields.io/npm/dw/@vladmandic/human.png?style=flat-square)
-![Downloads](https://img.shields.io/npm/dm/@vladmandic/human.png?style=flat-square)
-![Downloads](https://img.shields.io/npm/dy/@vladmandic/human.png?style=flat-square)
+---
+
+## 👨‍💻 Autor y Filosofía
+
+### **Enmanuel Reynoso Salazar**
+Creador de **Visión Humana** - Versión completamente en español del proyecto Human
+
+*Basado en el excelente trabajo de Vladimir Mandic con el proyecto original [Human](https://github.com/vladmandic/human)*
+
+### 🎯 Principios del Proyecto
+
+✅ **100% Procesamiento Local**  
+Todo el procesamiento de IA ocurre en tu dispositivo. Ningún dato de video, imagen o información personal sale de tu máquina.
+
+✅ **Sin Envío a la Nube**  
+No hay servidores externos, APIs en la nube ni servicios de terceros que procesen tus datos. Tu privacidad es absoluta.
+
+✅ **Detección Solamente**  
+El sistema está diseñado para detectar y analizar en tiempo real, no para almacenar, guardar o compartir información.
+
+✅ **Código Abierto y Transparente**  
+Todo el código es open source. Puedes revisar, auditar y verificar que cumplimos con nuestros principios de privacidad.
+
+✅ **Documentación en Español**  
+Interfaz, documentación, ejemplos y guías completamente en español para la comunidad hispanoablante.
+
+### 🛡️ Compromiso de Privacidad
+
+Este proyecto fue creado con la privacidad como prioridad #1:
+- ❌ No hay cookies de tracking
+- ❌ No hay analytics que envíen datos
+- ❌ No hay integración con servicios en la nube
+- ❌ No hay almacenamiento de datos personales
+- ✅ Todo el procesamiento es local y en tiempo real
+- ✅ Compatible con modo offline completo
+
+### 💬 Contacto y Contribuciones
+
+- **Repositorio**: [Vision-Humana en GitHub](https://github.com/EnmanuelReynoso23/Vision-Humana)
+- **Issues**: [Reportar bugs o sugerencias](https://github.com/EnmanuelReynoso23/Vision-Humana/issues)
+- **Plan de Mejoras**: [Ver roadmap del proyecto](PLAN_DE_MEJORAS.md)
+- **Demo en Vivo**: [https://vision-humana.vercel.app](https://vision-humana.vercel.app)
+
+Las contribuciones son bienvenidas. Si quieres mejorar el proyecto:
+1. 🐛 Reporta bugs o problemas
+2. 💡 Sugiere nuevas funcionalidades
+3. 🔧 Envía pull requests
+4. 📝 Mejora la documentación
+5. 🌍 Ayuda con traducciones
+
+---
+
+### 🚀 Proyecto Original
+
+Este proyecto es un fork en español del excelente [Human](https://github.com/vladmandic/human) creado por Vladimir Mandic.
+
+[![](https://img.shields.io/static/v1?label=Proyecto%20Original&message=Human%20by%20Vladimir%20Mandic&logo=GitHub&color=%23fe8e86)](https://github.com/vladmandic/human)
+
+---
+
+**© 2025 Enmanuel Reynoso Salazar** | Licencia MIT | Procesamiento 100% Local | Sin Envío de Datos
