@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Visión Humana</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --bg-dark: #1a202c;
+            --bg-surface: #2d3748;
+            --text-light: #ffffff;
+            --text-secondary: #a0aec0;
+            --success: #48bb78;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: var(--text-light);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+            filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .step {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: rgba(45, 55, 72, 0.95);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .privacy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(72, 187, 120, 0.2);
+            color: var(--success);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 2px solid var(--text-secondary);
+        }
+
+        .btn-secondary:hover {
+            color: var(--text-light);
+            border-color: var(--text-light);
+        }
+
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--primary-color);
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        .quick-tips {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-tips li {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .quick-tips li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .author-badge {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 12px;
+        }
+
+        .author-badge a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 1rem; }
+            .card { padding: 1.5rem; }
+            .button-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../assets/logo.svg" alt="Visión Humana" class="logo">
+            <h1>Bienvenido a Visión Humana</h1>
+            <p class="subtitle">Detección de IA 100% Local y Privada</p>
+        </div>
+
+        <!-- Paso 1: Introducción -->
+        <div class="step active" id="step1">
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem; font-size: 1.8rem;">🚀 ¿Qué es Visión Humana?</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Una potente herramienta de <strong>inteligencia artificial</strong> que te permite detectar y analizar 
+                    rostros, objetos, manos y gestos en <strong>tiempo real</strong>, directamente en tu navegador.
+                </p>
+                
+                <div class="privacy-badge">
+                    🔒 Todo el procesamiento ocurre en tu dispositivo
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">👤</span>
+                        <div class="feature-title">Detección Facial</div>
+                        <div class="feature-desc">Detecta múltiples rostros simultáneamente con análisis de emociones</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">📦</span>
+                        <div class="feature-title">Reconocimiento de Objetos</div>
+                        <div class="feature-desc">Identifica objetos comunes en tiempo real</div>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">✋</span>
+                        <div class="feature-title">Seguimiento de Manos</div>
+                        <div class="feature-desc">Tracking preciso de dedos y reconocimiento de gestos</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="nextStep()">
+                    Siguiente →
+                </button>
+            </div>
+        </div>
+
+        <!-- Paso 2: Privacidad -->
+        <div class="step" id="step2">
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem; font-size: 1.8rem;">🛡️ Tu Privacidad es Primero</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    A diferencia de otros servicios, Visión Humana procesa <strong>todo localmente</strong> en tu dispositivo.
+                </p>
+
+                <div style="display: grid; gap: 1rem;">
+                    <div style="display: flex; align-items: start; gap: 1rem; padding: 1rem; background: rgba(72, 187, 120, 0.1); border-radius: 8px;">
+                        <span style="font-size: 1.5rem;">✅</span>
+                        <div>
+                            <strong>Sin envío de datos</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Ningún video o imagen sale de tu dispositivo</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: start; gap: 1rem; padding: 1rem; background: rgba(72, 187, 120, 0.1); border-radius: 8px;">
+                        <span style="font-size: 1.5rem;">✅</span>
+                        <div>
+                            <strong>Sin almacenamiento</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">No guardamos ni registramos tu información</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: start; gap: 1rem; padding: 1rem; background: rgba(72, 187, 120, 0.1); border-radius: 8px;">
+                        <span style="font-size: 1.5rem;">✅</span>
+                        <div>
+                            <strong>Sin servicios externos</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">No dependemos de APIs en la nube</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-secondary" onclick="prevStep()">
+                    ← Anterior
+                </button>
+                <button class="btn btn-primary" onclick="nextStep()">
+                    Siguiente →
+                </button>
+            </div>
+        </div>
+
+        <!-- Paso 3: Cómo Usar -->
+        <div class="step" id="step3">
+            <div class="card">
+                <h2 style="margin-bottom: 1.5rem; font-size: 1.8rem;">📖 Guía Rápida</h2>
+                
+                <ul class="quick-tips">
+                    <li><strong>Presiona "Iniciar Video"</strong> en el menú superior para comenzar</li>
+                    <li><strong>Arrastra y suelta imágenes</strong> para analizarlas</li>
+                    <li><strong>Usa los menús</strong> para activar/desactivar funciones específicas</li>
+                    <li><strong>Ajusta la configuración</strong> según tu dispositivo para mejor rendimiento</li>
+                    <li><strong>Panel de detección</strong> muestra indicadores visuales cuando hay detecciones activas</li>
+                </ul>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(102, 126, 234, 0.1); border-radius: 12px; border-left: 4px solid var(--primary-color);">
+                    <strong style="font-size: 1.1rem;">💡 Consejo:</strong>
+                    <p style="margin-top: 0.5rem; color: var(--text-secondary);">
+                        Si tienes múltiples cámaras, usa el selector en la esquina superior derecha para cambiar entre ellas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-secondary" onclick="prevStep()">
+                    ← Anterior
+                </button>
+                <button class="btn btn-primary" onclick="finishOnboarding()">
+                    ¡Empezar! 🚀
+                </button>
+            </div>
+        </div>
+
+        <!-- Puntos de progreso -->
+        <div class="progress-dots">
+            <span class="dot active" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+        </div>
+
+        <!-- Autor -->
+        <div class="author-badge">
+            <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">Creado por</p>
+            <a href="https://github.com/EnmanuelReynoso23" target="_blank">
+                Enmanuel Reynoso Salazar
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 3;
+
+        function updateStep() {
+            // Ocultar todos los pasos
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.remove('active');
+            });
+
+            // Mostrar paso actual
+            document.getElementById(`step${currentStep}`).classList.add('active');
+
+            // Actualizar dots
+            for (let i = 1; i <= totalSteps; i++) {
+                const dot = document.getElementById(`dot${i}`);
+                if (i === currentStep) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            }
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateStep();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStep();
+            }
+        }
+
+        function finishOnboarding() {
+            // Guardar que el usuario completó el onboarding
+            localStorage.setItem('vision-humana-onboarding-completed', 'true');
+            
+            // Redirigir a la aplicación principal
+            window.location.href = './index.html';
+        }
+
+        // Si ya completó el onboarding, redirigir automáticamente
+        if (localStorage.getItem('vision-humana-onboarding-completed') === 'true') {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (!urlParams.has('force')) {
+                window.location.href = './index.html';
+            }
+        }
+    </script>
+</body>
+</html>
