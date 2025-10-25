@@ -1,93 +1,93 @@
-[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/vladmandic)
-![Git Version](https://img.shields.io/github/package-json/v/vladmandic/human?style=flat-square&svg=true&label=git)
-![NPM Version](https://img.shields.io/npm/v/@vladmandic/human.png?style=flat-square)
-![Last Commit](https://img.shields.io/github/last-commit/vladmandic/human?style=flat-square&svg=true)
-![License](https://img.shields.io/github/license/vladmandic/human?style=flat-square&svg=true)
-![GitHub Status Checks](https://img.shields.io/github/checks-status/vladmandic/human/main?style=flat-square&svg=true)
+[![](https://img.shields.io/static/v1?label=Patrocinar&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/vladmandic)
+![Versión Git](https://img.shields.io/github/package-json/v/EnmanuelReynoso23/Vision-Humana?style=flat-square&svg=true&label=git)
+![Versión NPM](https://img.shields.io/npm/v/@vladmandic/human.png?style=flat-square)
+![Último Commit](https://img.shields.io/github/last-commit/EnmanuelReynoso23/Vision-Humana?style=flat-square&svg=true)
+![Licencia](https://img.shields.io/github/license/EnmanuelReynoso23/Vision-Humana?style=flat-square&svg=true)
+![Estado de Verificaciones](https://img.shields.io/github/checks-status/EnmanuelReynoso23/Vision-Humana/main?style=flat-square&svg=true)
 
-# Human Library
+# Visión Humana
 
-**AI-powered 3D Face Detection & Rotation Tracking, Face Description & Recognition,**  
-**Body Pose Tracking, 3D Hand & Finger Tracking, Iris Analysis,**  
-**Age & Gender & Emotion Prediction, Gaze Tracking, Gesture Recognition, Body Segmentation**  
-
-<br>
-
-## Highlights
-
-- Compatible with most server-side and client-side environments and frameworks  
-- Combines multiple machine learning models which can be switched on-demand depending on the use-case  
-- Related models are executed in an attention pipeline to provide details when needed  
-- Optimized input pre-processing that can enhance image quality of any type of inputs  
-- Detection of frame changes to trigger only required models for improved performance  
-- Intelligent temporal interpolation to provide smooth results regardless of processing performance  
-- Simple unified API  
-- Built-in Image, Video and WebCam handling
-
-[*Jump to Quick Start*](#quick-start)
+**Detección y Seguimiento de Rostros 3D con IA, Descripción y Reconocimiento Facial,**  
+**Seguimiento de Pose Corporal, Seguimiento de Manos y Dedos 3D, Análisis de Iris,**  
+**Predicción de Edad, Género y Emociones, Seguimiento de Mirada, Reconocimiento de Gestos, Segmentación Corporal**  
 
 <br>
 
-## Compatibility
+## Características Destacadas
 
-**Browser**:  
-  - Compatible with both desktop and mobile platforms  
-  - Compatible with *WebGPU*, *WebGL*, *WASM*, *CPU* backends  
-  - Compatible with *WebWorker* execution  
-  - Compatible with *WebView*  
-  - Primary platform: *Chromium*-based browsers  
-  - Secondary platform: *Firefox*, *Safari*
+- Compatible con la mayoría de entornos y frameworks del lado del servidor y del cliente  
+- Combina múltiples modelos de aprendizaje automático que pueden alternarse bajo demanda según el caso de uso  
+- Los modelos relacionados se ejecutan en un pipeline de atención para proporcionar detalles cuando sea necesario  
+- Preprocesamiento de entrada optimizado que puede mejorar la calidad de imagen de cualquier tipo de entrada  
+- Detección de cambios de fotogramas para activar solo los modelos requeridos y mejorar el rendimiento  
+- Interpolación temporal inteligente para proporcionar resultados suaves independientemente del rendimiento de procesamiento  
+- API unificada y simple  
+- Manejo integrado de imágenes, videos y cámara web
+
+[*Ir a Inicio Rápido*](#inicio-rápido)
+
+<br>
+
+## Compatibilidad
+
+**Navegador**:  
+  - Compatible con plataformas de escritorio y móviles  
+  - Compatible con backends *WebGPU*, *WebGL*, *WASM*, *CPU*  
+  - Compatible con ejecución en *WebWorker*  
+  - Compatible con *WebView*  
+  - Plataforma principal: navegadores basados en *Chromium*  
+  - Plataforma secundaria: *Firefox*, *Safari*
 
 **NodeJS**:  
-  - Compatibile with *WASM* backend for executions on architectures where *tensorflow* binaries are not available  
-  - Compatible with *tfjs-node* using software execution via *tensorflow* shared libraries  
-  - Compatible with *tfjs-node* using GPU-accelerated execution via *tensorflow* shared libraries and nVidia CUDA  
-  - Supported versions are from **14.x** to **22.x**  
-  - NodeJS version **23.x** is not supported due to breaking changes and issues with `@tensorflow/tfjs`  
+  - Compatible con backend *WASM* para ejecuciones en arquitecturas donde los binarios de *tensorflow* no están disponibles  
+  - Compatible con *tfjs-node* usando ejecución por software vía bibliotecas compartidas de *tensorflow*  
+  - Compatible con *tfjs-node* usando ejecución acelerada por GPU vía bibliotecas compartidas de *tensorflow* y nVidia CUDA  
+  - Las versiones soportadas van desde **14.x** hasta **22.x**  
+  - La versión **23.x** de NodeJS no está soportada debido a cambios incompatibles y problemas con `@tensorflow/tfjs`
 
 <br>
 
-## Releases
-- [Release Notes](https://github.com/vladmandic/human/releases)
-- [NPM Link](https://www.npmjs.com/package/@vladmandic/human)
+## Versiones
+- [Notas de Versión](https://github.com/vladmandic/human/releases)
+- [Enlace NPM](https://www.npmjs.com/package/@vladmandic/human)
 ## Demos
 
-*Check out [**Simple Live Demo**](https://vladmandic.github.io/human/demo/typescript/index.html) fully annotated app as a good start starting point ([html](https://github.com/vladmandic/human/blob/main/demo/typescript/index.html))([code](https://github.com/vladmandic/human/blob/main/demo/typescript/index.ts))*  
+*Consulta el [**Demo Simple en Vivo**](https://vladmandic.github.io/human/demo/typescript/index.html), una aplicación completamente anotada como buen punto de partida ([html](https://github.com/vladmandic/human/blob/main/demo/typescript/index.html))([código](https://github.com/vladmandic/human/blob/main/demo/typescript/index.ts))*  
 
-*Check out [**Main Live Demo**](https://vladmandic.github.io/human/demo/index.html) app for advanced processing of of webcam, video stream or images static images with all possible tunable options*  
+*Consulta la [**Demo Principal en Vivo**](https://vladmandic.github.io/human/demo/index.html), una aplicación para procesamiento avanzado de cámara web, transmisión de video o imágenes estáticas con todas las opciones configurables posibles*  
 
-- To start video detection, simply press *Play*  
-- To process images, simply drag & drop in your Browser window  
-- Note: For optimal performance, select only models you'd like to use
-- Note: If you have modern GPU, *WebGL* (default) backend is preferred, otherwise select *WASM* backend
+- Para iniciar la detección de video, simplemente presiona *Reproducir*  
+- Para procesar imágenes, simplemente arrastra y suelta en tu ventana del navegador  
+- Nota: Para un rendimiento óptimo, selecciona solo los modelos que deseas usar
+- Nota: Si tienes una GPU moderna, el backend *WebGL* (predeterminado) es preferible, de lo contrario selecciona el backend *WASM*
 
 <br>
 
 
-- [**List of all Demo applications**](https://github.com/vladmandic/human/wiki/Demos)
-- [**Live Examples galery**](https://vladmandic.github.io/human/samples/index.html)
+- [**Lista de todas las aplicaciones Demo**](https://github.com/vladmandic/human/wiki/Demos)
+- [**Galería de Ejemplos en Vivo**](https://vladmandic.github.io/human/samples/index.html)
 
-### Browser Demos
+### Demos para Navegador
 
-*All browser demos are self-contained without any external dependencies*
+*Todos los demos del navegador son autocontenidos sin dependencias externas*
 
-- **Full** [[*Live*]](https://vladmandic.github.io/human/demo/index.html) [[*Details*]](https://github.com/vladmandic/human/tree/main/demo): Main browser demo app that showcases all Human capabilities
-- **Simple** [[*Live*]](https://vladmandic.github.io/human/demo/typescript/index.html) [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/typescript): Simple demo in WebCam processing demo in TypeScript
-- **Embedded** [[*Live*]](https://vladmandic.github.io/human/demo/video/index.html) [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/video/index.html): Even simpler demo with tiny code embedded in HTML file
-- **Face Detect** [[*Live*]](https://vladmandic.github.io/human/demo/facedetect/index.html) [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/facedetect): Extract faces from images and processes details
-- **Face Match** [[*Live*]](https://vladmandic.github.io/human/demo/facematch/index.html) [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/facematch): Extract faces from images, calculates face descriptors and similarities and matches them to known database
-- **Face ID** [[*Live*]](https://vladmandic.github.io/human/demo/faceid/index.html) [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/faceid): Runs multiple checks to validate webcam input before performing face match to faces in IndexDB
-- **Multi-thread** [[*Live*]](https://vladmandic.github.io/human/demo/multithread/index.html) [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/multithread): Runs each Human module in a separate web worker for highest possible performance  
-- **NextJS** [[*Live*]](https://vladmandic.github.io/human-next/out/index.html) [[*Details*]](https://github.com/vladmandic/human-next): Use Human with TypeScript, NextJS and ReactJS
-- **ElectronJS** [[*Details*]](https://github.com/vladmandic/human-electron): Use Human with TypeScript and ElectonJS to create standalone cross-platform apps
-- **3D Analysis with BabylonJS** [[*Live*]](https://vladmandic.github.io/human-motion/src/index.html) [[*Details*]](https://github.com/vladmandic/human-motion): 3D tracking and visualization of heead, face, eye, body and hand
-- **VRM Virtual Model Tracking with Three.JS** [[*Live*]](https://vladmandic.github.io/human-three-vrm/src/human-vrm.html) [[*Details*]](https://github.com/vladmandic/human-three-vrm): VR model with head, face, eye, body and hand tracking  
-- **VRM Virtual Model Tracking with BabylonJS** [[*Live*]](https://vladmandic.github.io/human-bjs-vrm/src/index.html) [[*Details*]](https://github.com/vladmandic/human-bjs-vrm): VR model with head, face, eye, body and hand tracking  
+- **Completo** [[*En Vivo*]](https://vladmandic.github.io/human/demo/index.html) [[*Detalles*]](https://github.com/vladmandic/human/tree/main/demo): Aplicación demo principal del navegador que muestra todas las capacidades de Vision Humana
+- **Simple** [[*En Vivo*]](https://vladmandic.github.io/human/demo/typescript/index.html) [[*Detalles*]](https://github.com/vladmandic/human/tree/main/demo/typescript): Demo simple de procesamiento de WebCam en TypeScript
+- **Embebido** [[*En Vivo*]](https://vladmandic.github.io/human/demo/video/index.html) [[*Detalles*]](https://github.com/vladmandic/human/tree/main/demo/video/index.html): Demo aún más simple con código pequeño embebido en archivo HTML
+- **Detección Facial** [[*En Vivo*]](https://vladmandic.github.io/human/demo/facedetect/index.html) [[*Detalles*]](https://github.com/vladmandic/human/tree/main/demo/facedetect): Extrae rostros de imágenes y procesa detalles
+- **Coincidencia Facial** [[*En Vivo*]](https://vladmandic.github.io/human/demo/facematch/index.html) [[*Detalles*]](https://github.com/vladmandic/human/tree/main/demo/facematch): Extrae rostros de imágenes, calcula descriptores faciales y similitudes y los compara con una base de datos conocida
+- **ID Facial** [[*En Vivo*]](https://vladmandic.github.io/human/demo/faceid/index.html) [[*Detalles*]](https://github.com/vladmandic/human/tree/main/demo/faceid): Ejecuta múltiples verificaciones para validar entrada de webcam antes de realizar coincidencia facial con rostros en IndexDB
+- **Multi-hilo** [[*En Vivo*]](https://vladmandic.github.io/human/demo/multithread/index.html) [[*Detalles*]](https://github.com/vladmandic/human/tree/main/demo/multithread): Ejecuta cada módulo de Vision Humana en un web worker separado para el máximo rendimiento posible  
+- **NextJS** [[*En Vivo*]](https://vladmandic.github.io/human-next/out/index.html) [[*Detalles*]](https://github.com/vladmandic/human-next): Usa Vision Humana con TypeScript, NextJS y ReactJS
+- **ElectronJS** [[*Detalles*]](https://github.com/vladmandic/human-electron): Usa Vision Humana con TypeScript y ElectonJS para crear aplicaciones multiplataforma independientes
+- **Análisis 3D con BabylonJS** [[*En Vivo*]](https://vladmandic.github.io/human-motion/src/index.html) [[*Detalles*]](https://github.com/vladmandic/human-motion): Seguimiento y visualización 3D de cabeza, rostro, ojo, cuerpo y mano
+- **Seguimiento de Modelo Virtual VRM con Three.JS** [[*En Vivo*]](https://vladmandic.github.io/human-three-vrm/src/human-vrm.html) [[*Detalles*]](https://github.com/vladmandic/human-three-vrm): Modelo VR con seguimiento de cabeza, rostro, ojo, cuerpo y mano  
+- **Seguimiento de Modelo Virtual VRM con BabylonJS** [[*En Vivo*]](https://vladmandic.github.io/human-bjs-vrm/src/index.html) [[*Detalles*]](https://github.com/vladmandic/human-bjs-vrm): Modelo VR con seguimiento de cabeza, rostro, ojo, cuerpo y mano  
 
-### NodeJS Demos
+### Demos para NodeJS
 
-*NodeJS demos may require extra dependencies which are used to decode inputs*  
-*See header of each demo to see its dependencies as they are not automatically installed with `Human`*
+*Los demos de NodeJS pueden requerir dependencias adicionales que se usan para decodificar entradas*  
+*Ver el encabezado de cada demo para ver sus dependencias ya que no se instalan automáticamente con `Vision Humana`*
 
 - **Main** [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/nodejs/node.js): Process images from files, folders or URLs using native methods  
 - **Canvas** [[*Details*]](https://github.com/vladmandic/human/tree/main/demo/nodejs/node-canvas.js): Process image from file or URL and draw results to a new image file using `node-canvas`  
@@ -221,10 +221,10 @@ Performs validation check on a webcam input to detect a real face and matches it
 
 <br><hr><br>
 
-## Quick Start
+## Inicio Rápido
 
-Simply load `Human` (*IIFE version*) directly from a cloud CDN in your HTML file:  
-(pick one: `jsdelirv`, `unpkg` or `cdnjs`)
+Simplemente carga `Vision Humana` (*versión IIFE*) directamente desde un CDN en la nube en tu archivo HTML:  
+(elige uno: `jsdelirv`, `unpkg` o `cdnjs`)
 
 ```html
 <!DOCTYPE HTML>

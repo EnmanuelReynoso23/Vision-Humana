@@ -1,7 +1,7 @@
 {
-  "name": "@vladmandic/human",
+  "name": "@enmanuelreynoso23/vision-humana",
   "version": "3.3.6",
-  "description": "Human: AI-powered 3D Face Detection & Rotation Tracking, Face Description & Recognition, Body Pose Tracking, 3D Hand & Finger Tracking, Iris Analysis, Age & Gender & Emotion Prediction, Gesture Recognition",
+  "description": "Visión Humana: Detección y Seguimiento de Rostros 3D con IA, Descripción y Reconocimiento Facial, Seguimiento de Pose Corporal, Seguimiento de Manos y Dedos 3D, Análisis de Iris, Predicción de Edad, Género y Emociones, Reconocimiento de Gestos",
   "sideEffects": false,
   "main": "dist/human.node.js",
   "module": "dist/human.esm.js",
@@ -27,18 +27,18 @@
     "require": "./dist/human.node.js",
     "import": "./dist/human.esm.js"
   },
-  "author": "Vladimir Mandic <mandic00@live.com>",
+  "author": "Enmanuel Reynoso <tu-email@ejemplo.com> (Fork de Vladimir Mandic)",
   "bugs": {
-    "url": "https://github.com/vladmandic/human/issues"
+    "url": "https://github.com/EnmanuelReynoso23/Vision-Humana/issues"
   },
-  "homepage": "https://vladmandic.github.io/human/demo/index.html",
+  "homepage": "https://github.com/EnmanuelReynoso23/Vision-Humana",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vladmandic/human.git"
+    "url": "git+https://github.com/EnmanuelReynoso23/Vision-Humana.git"
   },
   "scripts": {
     "start": "node --no-warnings demo/nodejs/node.js",
