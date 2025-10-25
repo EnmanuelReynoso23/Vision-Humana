@@ -1,0 +1,28 @@
+{
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": ".",
+  "devCommand": "python -m http.server 8080",
+  "installCommand": "echo 'No install required'",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cross-Origin-Embedder-Policy",
+          "value": "require-corp"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        }
+      ]
+    }
+  ]
+}
