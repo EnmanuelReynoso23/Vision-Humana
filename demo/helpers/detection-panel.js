@@ -72,33 +72,45 @@ class DetectionPanel {
       transition: all 0.3s ease;
     `;
 
-    // Estadísticas en tiempo real
+    // Indicadores simples de detección
     content.innerHTML += `
       <div style="
-        background: rgba(102, 126, 234, 0.1);
-        padding: 0.75rem;
-        border-radius: 8px;
+        display: flex;
+        gap: 0.5rem;
         margin-bottom: 1rem;
-        border-left: 3px solid var(--primary-color);
       ">
-        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-weight: 600;">📊 ESTADÍSTICAS EN VIVO</div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.8rem;">
-          <div>
-            <div style="color: var(--text-secondary); font-size: 0.7rem;">Rostros</div>
-            <div style="color: var(--primary-color); font-weight: 700; font-size: 1.2rem;" id="stat-faces">0</div>
-          </div>
-          <div>
-            <div style="color: var(--text-secondary); font-size: 0.7rem;">Objetos</div>
-            <div style="color: var(--secondary-color); font-weight: 700; font-size: 1.2rem;" id="stat-objects">0</div>
-          </div>
-          <div>
-            <div style="color: var(--text-secondary); font-size: 0.7rem;">Manos</div>
-            <div style="color: var(--success); font-weight: 700; font-size: 1.2rem;" id="stat-hands">0</div>
-          </div>
-          <div>
-            <div style="color: var(--text-secondary); font-size: 0.7rem;">FPS</div>
-            <div style="color: var(--warning); font-weight: 700; font-size: 1.2rem;" id="stat-fps">0</div>
-          </div>
+        <div id="face-indicator" style="
+          flex: 1;
+          background: rgba(102, 126, 234, 0.1);
+          padding: 0.75rem;
+          border-radius: 8px;
+          border-left: 3px solid var(--text-secondary);
+          transition: all 0.3s ease;
+        ">
+          <div style="font-size: 1.5rem; text-align: center; margin-bottom: 0.25rem;">👤</div>
+          <div style="font-size: 0.7rem; color: var(--text-secondary); text-align: center; font-weight: 600;">Rostro</div>
+        </div>
+        <div id="object-indicator" style="
+          flex: 1;
+          background: rgba(118, 75, 162, 0.1);
+          padding: 0.75rem;
+          border-radius: 8px;
+          border-left: 3px solid var(--text-secondary);
+          transition: all 0.3s ease;
+        ">
+          <div style="font-size: 1.5rem; text-align: center; margin-bottom: 0.25rem;">📦</div>
+          <div style="font-size: 0.7rem; color: var(--text-secondary); text-align: center; font-weight: 600;">Objeto</div>
+        </div>
+        <div id="hand-indicator" style="
+          flex: 1;
+          background: rgba(72, 187, 120, 0.1);
+          padding: 0.75rem;
+          border-radius: 8px;
+          border-left: 3px solid var(--text-secondary);
+          transition: all 0.3s ease;
+        ">
+          <div style="font-size: 1.5rem; text-align: center; margin-bottom: 0.25rem;">✋</div>
+          <div style="font-size: 0.7rem; color: var(--text-secondary); text-align: center; font-weight: 600;">Mano</div>
         </div>
       </div>
     `;
@@ -311,10 +323,47 @@ class DetectionPanel {
 
   updateStats(stats) {
     this.stats = { ...this.stats, ...stats };
-    document.getElementById('stat-faces').textContent = stats.facesDetected || 0;
-    document.getElementById('stat-objects').textContent = stats.objectsDetected || 0;
-    document.getElementById('stat-hands').textContent = stats.handsDetected || 0;
-    document.getElementById('stat-fps').textContent = stats.fps ? Math.round(stats.fps) : 0;
+    
+    // Actualizar indicadores visuales
+    const faceIndicator = document.getElementById('face-indicator');
+    const objectIndicator = document.getElementById('object-indicator');
+    const handIndicator = document.getElementById('hand-indicator');
+    
+    if (faceIndicator) {
+      if (stats.facesDetected > 0) {
+        faceIndicator.style.borderLeftColor = 'var(--primary-color)';
+        faceIndicator.style.background = 'rgba(102, 126, 234, 0.2)';
+        faceIndicator.style.transform = 'scale(1.05)';
+      } else {
+        faceIndicator.style.borderLeftColor = 'var(--text-secondary)';
+        faceIndicator.style.background = 'rgba(102, 126, 234, 0.1)';
+        faceIndicator.style.transform = 'scale(1)';
+      }
+    }
+    
+    if (objectIndicator) {
+      if (stats.objectsDetected > 0) {
+        objectIndicator.style.borderLeftColor = 'var(--secondary-color)';
+        objectIndicator.style.background = 'rgba(118, 75, 162, 0.2)';
+        objectIndicator.style.transform = 'scale(1.05)';
+      } else {
+        objectIndicator.style.borderLeftColor = 'var(--text-secondary)';
+        objectIndicator.style.background = 'rgba(118, 75, 162, 0.1)';
+        objectIndicator.style.transform = 'scale(1)';
+      }
+    }
+    
+    if (handIndicator) {
+      if (stats.handsDetected > 0) {
+        handIndicator.style.borderLeftColor = 'var(--success)';
+        handIndicator.style.background = 'rgba(72, 187, 120, 0.2)';
+        handIndicator.style.transform = 'scale(1.05)';
+      } else {
+        handIndicator.style.borderLeftColor = 'var(--text-secondary)';
+        handIndicator.style.background = 'rgba(72, 187, 120, 0.1)';
+        handIndicator.style.transform = 'scale(1)';
+      }
+    }
   }
 
   emitConfigChange() {
