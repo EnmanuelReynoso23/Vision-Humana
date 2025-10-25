@@ -1,10 +1,36 @@
 {
-  "name": "Human Library",
-  "short_name": "Human",
-  "icons": [{ "src": "../assets/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }],
+  "name": "Visión Humana - Detección IA Local",
+  "short_name": "Visión Humana",
+  "description": "Visión Humana: Detección y seguimiento de rostros 3D con IA. 100% local, sin envío de datos. Creado por Enmanuel Reynoso Salazar.",
   "start_url": "./index.html",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000"
+  "theme_color": "#667eea",
+  "background_color": "#1a202c",
+  "orientation": "any",
+  "categories": ["productivity", "utilities", "education"],
+  "lang": "es-ES",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "../assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "../assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Iniciar Detección",
+      "short_name": "Detectar",
+      "description": "Iniciar detección facial en tiempo real",
+      "url": "./index.html"
+    }
+  ]
 }

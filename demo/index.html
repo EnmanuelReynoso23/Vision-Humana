@@ -222,6 +222,76 @@
       .fas { display: inline-block;	width: 0;	height: 0; border-style: solid; }
       .fa-caret-down { border-width: 10px 8px 0 8px; border-color: white transparent }
       .fa-caret-right {	border-width: 10px 0 8px 10px; border-color: transparent transparent transparent white; }
+      
+      /* Responsive Design para Móviles */
+      @media (max-width: 768px) {
+        header {
+          padding: 0.75rem 1rem !important;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        header h1 {
+          font-size: 1.25rem !important;
+        }
+        header p {
+          font-size: 0.7rem !important;
+        }
+        header img {
+          width: 40px !important;
+          height: 40px !important;
+        }
+        .menubar {
+          padding: 0.5rem !important;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .icon {
+          width: 100px !important;
+          padding: 0.5rem !important;
+          font-size: 0.75rem;
+        }
+        .icon span {
+          font-size: 0.7rem !important;
+        }
+        .status {
+          font-size: 1.25rem !important;
+          bottom: 10% !important;
+        }
+        .log {
+          font-size: 0.7rem !important;
+          padding: 0.5rem 0.75rem !important;
+          max-width: 250px !important;
+          left: 0.5rem !important;
+          bottom: 0.5rem !important;
+        }
+        .play {
+          width: 80px !important;
+          height: 80px !important;
+          margin-left: -40px !important;
+        }
+        .loader {
+          width: 80px !important;
+          height: 80px !important;
+          margin-left: -40px !important;
+        }
+        .canvas {
+          max-width: 100% !important;
+          height: auto !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        header {
+          padding: 0.5rem !important;
+        }
+        .icon {
+          width: 80px !important;
+          padding: 0.35rem !important;
+        }
+        .menubar {
+          gap: 0.25rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -280,5 +350,34 @@
     <div id="hint" class="hint"></div>
     <div id="log" class="log"></div>
     <div id="results" class="results"></div>
+    
+    <!-- Footer con créditos -->
+    <footer style="
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background: rgba(45, 55, 72, 0.95);
+      padding: 0.5rem 1rem;
+      border-top-left-radius: 8px;
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      backdrop-filter: blur(10px);
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    ">
+      <span>© 2025</span>
+      <a href="https://github.com/EnmanuelReynoso23" target="_blank" rel="noopener" style="
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      " onmouseover="this.style.color='var(--secondary-color)'" onmouseout="this.style.color='var(--primary-color)'">
+        Enmanuel Reynoso Salazar
+      </a>
+      <span style="color: var(--text-secondary); opacity: 0.5;">|</span>
+      <span style="color: var(--success); font-weight: 600;">🔒 100% Local</span>
+    </footer>
   </body>
 </html>
